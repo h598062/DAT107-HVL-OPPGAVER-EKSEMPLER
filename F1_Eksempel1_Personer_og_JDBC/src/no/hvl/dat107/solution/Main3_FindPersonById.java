@@ -10,13 +10,13 @@ public class Main3_FindPersonById {
 
 	static final String JDBC_DRIVER = "org.postgresql.Driver";
 
-//	static final String DB_URL = "jdbc:postgresql://localhost:5432/dat107v22";
-//	static final String USER = "postgres";
-//	static final String PASS = Passwords.LOCALHOST_PASSWORD;
+	//	static final String DB_URL = "jdbc:postgresql://localhost:5432/dat107v22";
+	//	static final String USER = "postgres";
+	//	static final String PASS = Passwords.LOCALHOST_PASSWORD;
 
-	static final String DB_URL = "jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5432/lph";
-	static final String USER = "lph";
-	static final String PASS = Passwords.AZURE_PASSWORD;
+	static final String DB_URL = "jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5432/h598062";
+	static final String USER   = "h598062";
+	static final String PASS   = Passwords.AZURE_PASSWORD;
 
 	public static void main(String[] args) throws ClassNotFoundException {
 
@@ -35,8 +35,8 @@ public class Main3_FindPersonById {
 		Person p = null;
 
 		try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
-				Statement stmt = conn.createStatement();
-				ResultSet rs = stmt.executeQuery(sql)) {
+		     Statement stmt = conn.createStatement();
+		     ResultSet rs = stmt.executeQuery(sql)) {
 
 			if (rs.next()) {
 				p = new Person();

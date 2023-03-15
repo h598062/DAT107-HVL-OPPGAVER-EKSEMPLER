@@ -12,22 +12,21 @@ public class Main2_FindAll {
 
 	public static void main(String[] args) {
 
-		String jpql = "SELECT p FROM Person p"; //NB! Dette er ikke SQL, men JPQL
+		String       jpql     = "SELECT p FROM Person p"; // NB! Dette er ikke SQL, men JPQL
 		List<Person> personer = null;
-		
-		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("personPersistenceUnit", 
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("personPersistenceUnit",
 				Map.of("jakarta.persistence.jdbc.password", Passwords.AZURE_PASSWORD));
 
 		System.out.println("Kobler til database...");
 		EntityManager em = emf.createEntityManager();
 		try {
-	        TypedQuery<Person> query = em.createQuery(jpql, Person.class);
-	        personer = query.getResultList();
+			TypedQuery<Person> query = em.createQuery(jpql, Person.class);
+			personer = query.getResultList();
 		} finally {
-	        em.close();
+			em.close();
 		}
-		
+
 		System.out.println("Resultat:");
 		for (Person p : personer) {
 			System.out.println(p);
