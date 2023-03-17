@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/F1_Eksempel2_Personer_og_JPA/F1_Eksempel2_Personer_og_JPA.iml" filepath="$PROJECT_DIR$/F1_Eksempel2_Personer_og_JPA/F1_Eksempel2_Personer_og_JPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/F2_Eksempel1_CRUD_solution/F2_Eksempel1_CRUD_solution.iml" filepath="$PROJECT_DIR$/F2_Eksempel1_CRUD_solution/F2_Eksempel1_CRUD_solution.iml" />
       <module fileurl="file://$PROJECT_DIR$/F2_Eksempel2_Todos_initial/F2_Eksempel2_Todos_initial.iml" filepath="$PROJECT_DIR$/F2_Eksempel2_Todos_initial/F2_Eksempel2_Todos_initial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oving1_JPA/Oving1_JPA.iml" filepath="$PROJECT_DIR$/Oving1_JPA/Oving1_JPA.iml" />
     </modules>
   </component>
 </project>
