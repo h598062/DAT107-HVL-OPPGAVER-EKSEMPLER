@@ -18,8 +18,6 @@ public class TodoDAO {
 			String           ql = "select t from Todo as t order by t.id";
 			TypedQuery<Todo> q  = em.createQuery(ql, Todo.class);
 			return q.getResultList();
-
-
 		}
 	}
 
@@ -29,7 +27,6 @@ public class TodoDAO {
 
 		try (EntityManager em = emf.createEntityManager()) {
 			return em.find(Todo.class, pk);
-
 		}
 	}
 
@@ -65,7 +62,6 @@ public class TodoDAO {
 		EntityTransaction tx = em.getTransaction();
 
 		try (em) {
-
 			tx.begin();
 			em.persist(t);
 			tx.commit();
@@ -76,7 +72,6 @@ public class TodoDAO {
 				tx.rollback();
 			}
 		}
-
 		return t;
 	}
 
@@ -123,7 +118,6 @@ public class TodoDAO {
 				tx.rollback();
 			}
 		}
-
 		return suksess;
 	}
 
@@ -147,7 +141,6 @@ public class TodoDAO {
 				tx.rollback();
 			}
 		}
-
 		return suksess;
 	}
 }
