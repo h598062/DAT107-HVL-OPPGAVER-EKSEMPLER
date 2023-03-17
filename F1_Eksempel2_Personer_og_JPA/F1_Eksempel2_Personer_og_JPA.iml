@@ -25,41 +25,8 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library">
-      <library name="junit5">
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="postgresql-42.5.2.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/postgresql-42.5.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="eclipselink-3.0.3.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/eclipselink-3.0.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="jakarta.persistence-api-3.1.0.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/jakarta.persistence-api-3.1.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="postgresql" level="application" />
+    <orderEntry type="library" name="jakarta.persistence.api" level="application" />
+    <orderEntry type="library" name="eclipse.persistence.eclipselink" level="application" />
   </component>
 </module>
