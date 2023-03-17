@@ -1,11 +1,9 @@
 package no.hvl.dat107;
 
+import java.util.List;
 import java.util.Map;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
+import jakarta.persistence.*;
 
 public class TodoDAO {
 
@@ -14,163 +12,142 @@ public class TodoDAO {
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/ finnAlleTodos(/*???*/) {
+	public List<Todo> finnAlleTodos() {
 
-		EntityManager em = emf.createEntityManager();
+		try (EntityManager em = emf.createEntityManager()) {
+			String           ql = "select t from Todo as t order by t.id";
+			TypedQuery<Todo> q  = em.createQuery(ql, Todo.class);
+			return q.getResultList();
 
-		try {
-			/*???*/
-			return null /*???*/;
 
-		} finally {
-			em.close();
 		}
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/ finnTodoMedPk(/*???*/) {
+	public Todo finnTodoMedPk(int pk) {
 
-		EntityManager em = emf.createEntityManager();
+		try (EntityManager em = emf.createEntityManager()) {
+			return em.find(Todo.class, pk);
 
-		try {
-			/*???*/
-			return null /*???*/;
-
-		} finally {
-			em.close();
 		}
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/ finnTodoMedTekst(/*???*/) {
-		EntityManager em = emf.createEntityManager();
+	public Todo finnTodoMedTekst(String tekst) {
 
-		try {
-			/*???*/
-			return null /*???*/;
-
-		} finally {
-			em.close();
+		try (EntityManager em = emf.createEntityManager()) {
+			String           ql = "select t from Todo as t where t.tekst = '" + tekst + "'";
+			TypedQuery<Todo> q  = em.createQuery(ql, Todo.class);
+			return q.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
 		}
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/  finnTodosMedTekst(/*???*/) {
-		EntityManager em = emf.createEntityManager();
+	public List<Todo> finnTodosMedTekst(String tekst) {
 
-		try {
-			/*???*/
-			return null /*???*/;
-
-		} finally {
-			em.close();
+		try (EntityManager em = emf.createEntityManager()) {
+			String           ql = "select t from Todo as t where t.tekst = '" + tekst + "' order by t.id";
+			TypedQuery<Todo> q  = em.createQuery(ql, Todo.class);
+			return q.getResultList();
 		}
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/ lagreNyTodo(/*???*/) {
+	public Todo lagreNyTodo(Todo t) {
 
 		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
-		try {
+		try (em) {
+
 			tx.begin();
-
-			/*???*/
-
+			em.persist(t);
 			tx.commit();
 
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();
 			}
-		} finally {
-			em.close();
 		}
 
-		return null /*???*/;
+		return t;
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/ slettTodoMedPk(/*???*/) {
+	public Todo slettTodoMedPk(int pk) {
 
 		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
-		try {
+		try (em) {
 			tx.begin();
-
-			/*???*/
-
+			Todo t = em.find(Todo.class, pk);
+			em.remove(t);
 			tx.commit();
-
-		} catch (Throwable e) {
+			return t;
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();
 			}
-		} finally {
-			em.close();
 		}
-
-		return null /*???*/;
+		return null;
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/ oppdaterTodo(/*???*/) {
+	public boolean oppdaterTodo(int pk, String tekst) {
 
 		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
-		try {
+		boolean suksess = false;
+
+		try (em) {
 			tx.begin();
-
-			/*???*/
-
+			Todo t = em.find(Todo.class, pk);
+			t.setTekst(tekst);
 			tx.commit();
-
-		} catch (Throwable e) {
+			suksess = true;
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();
 			}
-		} finally {
-			em.close();
 		}
 
-		return null /*???*/;
+		return suksess;
 	}
 
 	/* --------------------------------------------------------------------- */
 
-	public Object/*???*/ oppdaterTekst(/*???*/) {
+	public boolean oppdaterTekst(int pk, String tekst) {
 
 		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
-		try {
+		boolean suksess = false;
+
+		try (em) {
 			tx.begin();
-
-			/*???*/
-
+			em.merge(new Todo(pk, tekst));
 			tx.commit();
-
-		} catch (Throwable e) {
+			suksess = true;
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();
 			}
-		} finally {
-			em.close();
 		}
 
-		return null /*???*/;
+		return suksess;
 	}
 }
