@@ -8,20 +8,19 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
 public class TodoDAO {
-	
-	private EntityManagerFactory emf 
-			= Persistence.createEntityManagerFactory("todoPersistenceUnit", 
+
+	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("todoPersistenceUnit",
 			Map.of("jakarta.persistence.jdbc.password", Passwords.AZURE_PASSWORD));
-	
+
 	/* --------------------------------------------------------------------- */
 
 	public Object/*???*/ finnAlleTodos(/*???*/) {
-		
+
 		EntityManager em = emf.createEntityManager();
-		
+
 		try {
 			/*???*/
-			return null /*???*/; 
+			return null /*???*/;
 
 		} finally {
 			em.close();
@@ -31,12 +30,12 @@ public class TodoDAO {
 	/* --------------------------------------------------------------------- */
 
 	public Object/*???*/ finnTodoMedPk(/*???*/) {
-		
+
 		EntityManager em = emf.createEntityManager();
 
 		try {
 			/*???*/
-			return null /*???*/; 
+			return null /*???*/;
 
 		} finally {
 			em.close();
@@ -47,25 +46,25 @@ public class TodoDAO {
 
 	public Object/*???*/ finnTodoMedTekst(/*???*/) {
 		EntityManager em = emf.createEntityManager();
-		
+
 		try {
 			/*???*/
-			return null /*???*/; 
-			
+			return null /*???*/;
+
 		} finally {
 			em.close();
 		}
 	}
-	
+
 	/* --------------------------------------------------------------------- */
 
 	public Object/*???*/  finnTodosMedTekst(/*???*/) {
 		EntityManager em = emf.createEntityManager();
-		
+
 		try {
 			/*???*/
-			return null /*???*/; 
-		
+			return null /*???*/;
+
 		} finally {
 			em.close();
 		}
@@ -74,17 +73,17 @@ public class TodoDAO {
 	/* --------------------------------------------------------------------- */
 
 	public Object/*???*/ lagreNyTodo(/*???*/) {
-		
-		EntityManager em = emf.createEntityManager();
+
+		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
 		try {
 			tx.begin();
-			
+
 			/*???*/
-			
+
 			tx.commit();
-			
+
 		} catch (Throwable e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
@@ -93,24 +92,24 @@ public class TodoDAO {
 		} finally {
 			em.close();
 		}
-		
-		return null /*???*/; 
+
+		return null /*???*/;
 	}
 
 	/* --------------------------------------------------------------------- */
 
 	public Object/*???*/ slettTodoMedPk(/*???*/) {
-		
-		EntityManager em = emf.createEntityManager();
+
+		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
 		try {
 			tx.begin();
-			
+
 			/*???*/
-			
+
 			tx.commit();
-			
+
 		} catch (Throwable e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
@@ -119,24 +118,24 @@ public class TodoDAO {
 		} finally {
 			em.close();
 		}
-		
-		return null /*???*/; 
+
+		return null /*???*/;
 	}
 
 	/* --------------------------------------------------------------------- */
 
 	public Object/*???*/ oppdaterTodo(/*???*/) {
-		
-		EntityManager em = emf.createEntityManager();
+
+		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
 		try {
 			tx.begin();
-			
+
 			/*???*/
-			
+
 			tx.commit();
-			
+
 		} catch (Throwable e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
@@ -145,24 +144,24 @@ public class TodoDAO {
 		} finally {
 			em.close();
 		}
-		
-		return null /*???*/; 
+
+		return null /*???*/;
 	}
 
 	/* --------------------------------------------------------------------- */
 
 	public Object/*???*/ oppdaterTekst(/*???*/) {
-		
-		EntityManager em = emf.createEntityManager();
+
+		EntityManager     em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
 		try {
 			tx.begin();
-			
+
 			/*???*/
-			
+
 			tx.commit();
-			
+
 		} catch (Throwable e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
@@ -171,7 +170,7 @@ public class TodoDAO {
 		} finally {
 			em.close();
 		}
-		
-		return null /*???*/; 
+
+		return null /*???*/;
 	}
 }

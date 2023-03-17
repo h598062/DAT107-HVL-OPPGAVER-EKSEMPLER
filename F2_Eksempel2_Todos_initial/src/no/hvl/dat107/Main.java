@@ -6,17 +6,17 @@ import java.util.Scanner;
 public class Main {
 
 	//-------------------------------------------------------------------------
-	
+
 	/*
 	 *  Hjelpeklasse for å snakke med databasen.
 	 *  DAO er en forkortelse for Data Access Object,
 	 *  og er et vanlig navn på slike.
 	 */
 	private static TodoDAO todoDAO = new TodoDAO();
-	
+
 	public static void main(String[] args) {
 
-		/* 
+		/*
 		 * Databasen i utgangspunktet:
 		 * 	1, 'Handle mat'
 		 * 	2, 'Vaske opp'
@@ -34,19 +34,19 @@ public class Main {
 		// f) Endre tekst på todo med pk=3
 		// g) Endre tekst på todo med pk=3, alternativ måte
 	}
-	
+
 	//-------------------------------------------------------------------------
-	
+
 	private static Scanner scanner = new Scanner(System.in);
-	
+
 	private static void pauseOgSjekkPgAdmin(String sisteAction) {
 		System.out.println("\n" + sisteAction);
 		System.out.println("\nTodo-objekter i persistence context nå:");
-//		todoDAO.finnAlleTodos().forEach(System.out::println);
+		//		todoDAO.finnAlleTodos().forEach(System.out::println);
 		System.out.println("\nSjekk om det ser likt ut i PgAdmin.");
 		System.out.println("\nTrykk \"ENTER\" for å fortsette programmet ...");
 		scanner.nextLine();
 	}
-	
+
 
 }
