@@ -1,0 +1,7 @@
+Det spørs helt hvor lang registreringsnumrene er. 
+Vi har valgt at registreringsnummer feltet skal være 9 tegn langt.
+Hvis det kommer en bil med lengre registreringsnummer så vil ikke det funke.
+Dette er nok noe vi enkelt kan endre på enten ved å redigere tabellen til å øke antall tegn for dette feltet,
+eller ved å opprette ny tabell der den støtter større regnr.
+
+Noen utenlandske regnr bruker "-" i skiltnumrene. Om de skal inkluderes eller ikke er usikkert.

@@ -9,7 +9,7 @@ import jakarta.persistence.Persistence;
 
 public class TodoDAO {
 
-	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("todoPersistenceUnit",
+	private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("todoPersistenceUnit",
 			Map.of("jakarta.persistence.jdbc.password", Passwords.AZURE_PASSWORD));
 
 	/* --------------------------------------------------------------------- */

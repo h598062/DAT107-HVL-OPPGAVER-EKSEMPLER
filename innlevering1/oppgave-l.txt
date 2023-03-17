@@ -1,0 +1,8 @@
+Vi tenker at for denne oppgaven og de funksjonene som kreves for å løse den 
+er det ikke nødvendig med noen andre tabeller.
+
+Hvis vi derimot skal lage funksjoner som f.eks. ta bilder av biler som kommer,
+bilene har bompengebrikker osv. så ville vi kanskje hatt en tabell til.
+I denne tabellen ville vi registrert alle passeringer hvor en kunde / eier ikke
+kan gjenkjennes, med bilde av bilen, og så ha noen til å manuelt sjekke og fikse
+data for passeringen.

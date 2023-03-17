@@ -1,0 +1,1 @@
+Kjør python filen "generer_testdata.py" og deretter kjør sql kommandoene i filene "testkundedata.sql" og "testpasseringerdata.sql"

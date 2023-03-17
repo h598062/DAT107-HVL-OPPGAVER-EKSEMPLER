@@ -1,0 +1,8 @@
+Systemet vi har for øyeblikket kan ta inn passeringer hvor registreringsnummer ikke blir lest, 
+men det er da ikke noen måter å linke denne passeringen opp mot en kunde.
+Et bedre system hadde i tillegg tatt bilde av passerende biler og lagret det i tillegg.
+
+Bompengesystemer vi har i Norge bruker jo en egen bompenge brikke, autopass, for å registrere passeringer. 
+Dette funker mye bedre enn å kjenne igjen registreringsnummer.
+Hvis en passerende bil ikke har autopass brikke blir den tatt bilde av og sjekket for registreringsnummer 
+etc. og eier får regning i posten.
