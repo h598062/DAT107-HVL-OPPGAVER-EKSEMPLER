@@ -29,7 +29,7 @@ public class PersonCrudHjelper implements PersonCrudInterface {
 			em.persist(p); //Oppretter en ny rad i databasen
 			tx.commit();
 		
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			tx.rollback();
 		} finally {
@@ -93,7 +93,7 @@ public class PersonCrudHjelper implements PersonCrudInterface {
 		
 			tx.commit();
 			
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			tx.rollback();
 		} finally {
@@ -115,7 +115,7 @@ public class PersonCrudHjelper implements PersonCrudInterface {
 			
 			tx.commit();
 		
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			tx.rollback();
 		} finally {

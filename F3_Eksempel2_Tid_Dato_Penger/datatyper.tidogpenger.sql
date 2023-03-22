@@ -29,5 +29,5 @@ INSERT INTO
 VALUES
     (4.10, '2018-03-20', '04:05:06', '2004-10-19 10:23:54');
 
-SELECT * FROM datatyper.tidogpenger;
+SELECT * FROM tidogpenger;
 

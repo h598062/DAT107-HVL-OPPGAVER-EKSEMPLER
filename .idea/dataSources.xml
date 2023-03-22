@@ -8,7 +8,7 @@
       <jdbc-url>jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5432/h598062</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="HVL-DAT107-ALTERNATIV" uuid="a7e274d9-d056-4515-bb4e-59e36faf41c2">
+    <data-source source="LOCAL" name="HVL-DAT107-zAlt" uuid="a7e274d9-d056-4515-bb4e-59e36faf41c2">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

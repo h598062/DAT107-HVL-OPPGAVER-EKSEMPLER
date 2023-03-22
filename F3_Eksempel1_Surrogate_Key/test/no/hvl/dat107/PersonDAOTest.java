@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class PersonDAOTest {
+class PersonDAOTest {
     
     /*
      * Problemet med testing av klasser som jobber mot database
@@ -28,12 +28,12 @@ public class PersonDAOTest {
     }
     
 	@Test
-	public void person1SkalHetePer() {
+	void person1SkalHetePer() {
 		assertEquals("Per Viskeler", person1.getNavn());
 	}
 	
 	@Test
-	public void endringAvNavnSkalVirkeFint() {
+	void endringAvNavnSkalVirkeFint() {
 	    
         String gammeltNavn = person1.getNavn();
         String nyttNavn = "Nytt Navn";

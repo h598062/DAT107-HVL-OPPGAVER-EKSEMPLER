@@ -9,7 +9,7 @@ import jakarta.persistence.Persistence;
 
 public class TidOgPengerDAO {
 
-    private EntityManagerFactory emf;
+    private final EntityManagerFactory emf;
 
     public TidOgPengerDAO() {
         emf = Persistence.createEntityManagerFactory("datatyperPersistenceUnit", 
@@ -39,7 +39,7 @@ public class TidOgPengerDAO {
             em.persist(ny);
             tx.commit();
         
-        } catch (Throwable e) {
+        } catch (Exception e) {
             e.printStackTrace();
             tx.rollback();
         } finally {

@@ -92,7 +92,7 @@ public class TodoDAO {
 			
 			tx.commit();
 			
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();
@@ -120,7 +120,7 @@ public class TodoDAO {
 			
 			tx.commit();
 
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();
@@ -143,7 +143,7 @@ public class TodoDAO {
 			em.merge(todo);
 			
 			tx.commit();
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();
@@ -170,7 +170,7 @@ public class TodoDAO {
 			managedTodo.setTekst(tekst);
 						
 			tx.commit();
-		} catch (Throwable e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx.isActive()) {
 				tx.rollback();

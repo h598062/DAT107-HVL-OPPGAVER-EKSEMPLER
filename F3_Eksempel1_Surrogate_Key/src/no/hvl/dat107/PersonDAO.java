@@ -11,8 +11,8 @@ import jakarta.persistence.TypedQuery;
 
 public class PersonDAO {
 
-    private EntityManagerFactory emf;
-    
+    private final EntityManagerFactory emf;
+
     public PersonDAO() {
     	emf	= Persistence.createEntityManagerFactory("personPersistenceUnit", 
 		Map.of("jakarta.persistence.jdbc.password", Passwords.AZURE_PASSWORD));
@@ -28,7 +28,7 @@ public class PersonDAO {
             em.persist(p);
             tx.commit();
         
-        } catch (Throwable e) {
+        } catch (Exception e) {
             e.printStackTrace();
             tx.rollback();
         } finally {
@@ -79,7 +79,7 @@ public class PersonDAO {
             if (x) q.setNavn("Tull");   //Virker siden q er managed
             em.getTransaction().commit();
         
-        } catch (Throwable e) {
+        } catch (Exception e) {
             e.printStackTrace();
             em.getTransaction().rollback();
         } finally {
@@ -97,7 +97,7 @@ public class PersonDAO {
 //            em.remove(em.merge(p)); Vel ..?
             em.getTransaction().commit();
         
-        } catch (Throwable e) {
+        } catch (Exception e) {
             e.printStackTrace();
             em.getTransaction().rollback();
         } finally {

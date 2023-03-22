@@ -9,7 +9,7 @@ import jakarta.persistence.Persistence;
 
 public class VitnemalDAO {
 
-    private EntityManagerFactory emf;
+    private final EntityManagerFactory emf;
 
     public VitnemalDAO() {
         emf = Persistence.createEntityManagerFactory("vitnemalPU",
