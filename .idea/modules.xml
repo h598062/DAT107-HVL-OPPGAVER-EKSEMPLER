@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../DAT107-OBLIG3/DAT107-OBLIG3.iml" filepath="$PROJECT_DIR$/../DAT107-OBLIG3/DAT107-OBLIG3.iml" />
       <module fileurl="file://$PROJECT_DIR$/F1_Eksempel1_Personer_og_JDBC/F1_Eksempel1_Personer_og_JDBC.iml" filepath="$PROJECT_DIR$/F1_Eksempel1_Personer_og_JDBC/F1_Eksempel1_Personer_og_JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/F1_Eksempel2_Personer_og_JPA/F1_Eksempel2_Personer_og_JPA.iml" filepath="$PROJECT_DIR$/F1_Eksempel2_Personer_og_JPA/F1_Eksempel2_Personer_og_JPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/F2_Eksempel1_CRUD_solution/F2_Eksempel1_CRUD_solution.iml" filepath="$PROJECT_DIR$/F2_Eksempel1_CRUD_solution/F2_Eksempel1_CRUD_solution.iml" />
