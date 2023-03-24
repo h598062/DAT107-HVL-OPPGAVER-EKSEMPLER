@@ -1,11 +1,13 @@
 package no.hvl.dat107;
 
+import java.util.List;
 import java.util.Map;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.TypedQuery;
 
 public class VitnemalDAO {
 
@@ -63,5 +65,31 @@ public class VitnemalDAO {
             em.close();
         }
     }
+    
+    /* --------------------------------------------------------------------- */
+
+    public List<Karakter> hentKarakterlisteForFerdige(String emnekode) {
+        
+        EntityManager em = emf.createEntityManager();
+        
+        try {
+        	
+        	String jpqlQuery = """
+        			SELECT k 
+        			FROM Karakter k 
+        			WHERE k.vitnemal.studieslutt IS NOT NULL
+        			AND k.emnekode LIKE :emnekode""";
+        	
+			TypedQuery<Karakter> query = em.createQuery(jpqlQuery, Karakter.class);
+			query.setParameter("emnekode", emnekode);
+
+			return query.getResultList();
+        	
+        } finally {
+            em.close();
+        }
+    }
+    
+
 }
 
