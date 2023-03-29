@@ -11,6 +11,12 @@
       <module fileurl="file://$PROJECT_DIR$/F3_Eksempel1_Surrogate_Key/F3_Eksempel1_Surrogate_Key.iml" filepath="$PROJECT_DIR$/F3_Eksempel1_Surrogate_Key/F3_Eksempel1_Surrogate_Key.iml" />
       <module fileurl="file://$PROJECT_DIR$/F3_Eksempel2_Tid_Dato_Penger/F3_Eksempel2_Tid_Dato_Penger.iml" filepath="$PROJECT_DIR$/F3_Eksempel2_Tid_Dato_Penger/F3_Eksempel2_Tid_Dato_Penger.iml" />
       <module fileurl="file://$PROJECT_DIR$/F3_Eksempel3_12m_Vitnemal_initial/F3_Eksempel3_12m_Vitnemal_initial.iml" filepath="$PROJECT_DIR$/F3_Eksempel3_12m_Vitnemal_initial/F3_Eksempel3_12m_Vitnemal_initial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F4_OneToMany_Vitnemal_solution/F4_OneToMany_Vitnemal_solution.iml" filepath="$PROJECT_DIR$/F4_OneToMany_Vitnemal_solution/F4_OneToMany_Vitnemal_solution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F5_Ex1_OneToMany_Todoliste_initial/F5_Ex1_OneToMany_Todoliste_initial.iml" filepath="$PROJECT_DIR$/F5_Ex1_OneToMany_Todoliste_initial/F5_Ex1_OneToMany_Todoliste_initial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F5_Ex2_OneToOne_Ansatt_Rom/F5_Ex2_OneToOne_Ansatt_Rom.iml" filepath="$PROJECT_DIR$/F5_Ex2_OneToOne_Ansatt_Rom/F5_Ex2_OneToOne_Ansatt_Rom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F5_Ex3a_ManyToMany_Ansatt_Prosjekt/F5_Ex3a_ManyToMany_Ansatt_Prosjekt.iml" filepath="$PROJECT_DIR$/F5_Ex3a_ManyToMany_Ansatt_Prosjekt/F5_Ex3a_ManyToMany_Ansatt_Prosjekt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F5_Ex3b_PDeltagelse_Sammensatt_PK/F5_Ex3b_PDeltagelse_Sammensatt_PK.iml" filepath="$PROJECT_DIR$/F5_Ex3b_PDeltagelse_Sammensatt_PK/F5_Ex3b_PDeltagelse_Sammensatt_PK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F5_Ex3c_PDeltagelse_Kunstig_PK/F5_Ex3c_PDeltagelse_Kunstig_PK.iml" filepath="$PROJECT_DIR$/F5_Ex3c_PDeltagelse_Kunstig_PK/F5_Ex3c_PDeltagelse_Kunstig_PK.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oving1_JPA/Oving1_JPA.iml" filepath="$PROJECT_DIR$/Oving1_JPA/Oving1_JPA.iml" />
     </modules>
   </component>
