@@ -76,8 +76,9 @@ public class VitnemalDAO {
         	
         	String jpqlQuery = """
         			SELECT k 
-        			FROM Karakter k 
-        			WHERE k.vitnemal.studieslutt IS NOT NULL
+        			FROM Karakter AS k, 
+        			k.vitnemal AS v 
+        			WHERE v.studieslutt IS NOT NULL
         			AND k.emnekode LIKE :emnekode""";
         	
 			TypedQuery<Karakter> query = em.createQuery(jpqlQuery, Karakter.class);

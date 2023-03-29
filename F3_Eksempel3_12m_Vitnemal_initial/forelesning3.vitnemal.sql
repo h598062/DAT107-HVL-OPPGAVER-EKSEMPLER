@@ -50,10 +50,10 @@ SELECT * FROM Karakter;
 -- ferdig (har sluttdato). Forventer kun denne:
 -- 		(1, DAT107, '2022-05-30', 'A', 123456)
 SELECT k.* 
-FROM karakter k 
---	JOIN vitnemal v ON k.studnr = v.studnr
+FROM karakter AS k 
+--	JOIN vitnemal AS v ON k.studnr = v.studnr
 --  evt.
-NATURAL JOIN vitnemal v
+NATURAL JOIN vitnemal AS v
 WHERE v.studieslutt IS NOT NULL
 AND k.emnekode LIKE 'DAT107';
    
