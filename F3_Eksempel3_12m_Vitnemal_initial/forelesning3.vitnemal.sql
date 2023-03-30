@@ -39,11 +39,10 @@ VALUES
     ('DAT107', '2022-05-30', 'A', 123456),
     ('DAT102', '2022-06-04', 'A', 123456),
     ('DAT107', '2022-05-30', 'B', 234567);
-<<<<<<< HEAD
     
 SELECT * FROM Vitnemal;
 SELECT * FROM Karakter;
-=======
+
 
     
 -- Finne liste av DAT107-karakterer for studenter som er
@@ -56,10 +55,3 @@ FROM karakter AS k
 NATURAL JOIN vitnemal AS v
 WHERE v.studieslutt IS NOT NULL
 AND k.emnekode LIKE 'DAT107';
-   
-
-    
-    
-    
-    
->>>>>>> upstream/main
