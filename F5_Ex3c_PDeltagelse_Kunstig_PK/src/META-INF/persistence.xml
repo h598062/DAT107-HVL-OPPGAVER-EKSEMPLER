@@ -12,9 +12,9 @@
         
 		<properties>
 			<property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
-			<property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dat107v23" />
-			<property name="jakarta.persistence.jdbc.user" value="postgres" />
-			<property name="jakarta.persistence.jdbc.password" value="postgres" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5432/h598062"/>
+			<property name="jakarta.persistence.jdbc.user" value="h598062"/>
+			<property name="jakarta.persistence.jdbc.password" value="pass" />
 
 			<!-- Se https://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging -->
 			<property name="eclipselink.logging.level" value="WARNING" />

@@ -17,6 +17,10 @@
       <module fileurl="file://$PROJECT_DIR$/F5_Ex3a_ManyToMany_Ansatt_Prosjekt/F5_Ex3a_ManyToMany_Ansatt_Prosjekt.iml" filepath="$PROJECT_DIR$/F5_Ex3a_ManyToMany_Ansatt_Prosjekt/F5_Ex3a_ManyToMany_Ansatt_Prosjekt.iml" />
       <module fileurl="file://$PROJECT_DIR$/F5_Ex3b_PDeltagelse_Sammensatt_PK/F5_Ex3b_PDeltagelse_Sammensatt_PK.iml" filepath="$PROJECT_DIR$/F5_Ex3b_PDeltagelse_Sammensatt_PK/F5_Ex3b_PDeltagelse_Sammensatt_PK.iml" />
       <module fileurl="file://$PROJECT_DIR$/F5_Ex3c_PDeltagelse_Kunstig_PK/F5_Ex3c_PDeltagelse_Kunstig_PK.iml" filepath="$PROJECT_DIR$/F5_Ex3c_PDeltagelse_Kunstig_PK/F5_Ex3c_PDeltagelse_Kunstig_PK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F6_Hona_og_egget/F6_Hona_og_egget.iml" filepath="$PROJECT_DIR$/F6_Hona_og_egget/F6_Hona_og_egget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F6a_Subtyper_JOINED/F6a_Subtyper_JOINED.iml" filepath="$PROJECT_DIR$/F6a_Subtyper_JOINED/F6a_Subtyper_JOINED.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F6b_Subtyper_SINGLE_TABLE/F6b_Subtyper_SINGLE_TABLE.iml" filepath="$PROJECT_DIR$/F6b_Subtyper_SINGLE_TABLE/F6b_Subtyper_SINGLE_TABLE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F6c_Subtyper_TABLE_PER_CLASS/F6c_Subtyper_TABLE_PER_CLASS.iml" filepath="$PROJECT_DIR$/F6c_Subtyper_TABLE_PER_CLASS/F6c_Subtyper_TABLE_PER_CLASS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oving1_JPA/Oving1_JPA.iml" filepath="$PROJECT_DIR$/Oving1_JPA/Oving1_JPA.iml" />
     </modules>
   </component>
