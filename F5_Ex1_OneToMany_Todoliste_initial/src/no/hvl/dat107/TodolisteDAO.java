@@ -61,7 +61,7 @@ public class TodolisteDAO {
         EntityTransaction tx = em.getTransaction();
         try {
             tx.begin();
-            /*TODO*/
+            em.merge(oppdatertListe);
             tx.commit();
             
         } catch (Throwable e) {

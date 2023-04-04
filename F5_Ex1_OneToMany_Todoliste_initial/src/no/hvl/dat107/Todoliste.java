@@ -3,7 +3,9 @@ package no.hvl.dat107;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,7 +21,10 @@ public class Todoliste {
 	private int id;
 	private String navn;
 	
-	@OneToMany(mappedBy = "liste")
+	@OneToMany(mappedBy = "liste", 
+			fetch = FetchType.EAGER,
+			cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+			orphanRemoval = true)
 	List<Todo> todos = new ArrayList<>();
 	
 	public Todoliste() {}
@@ -30,6 +35,12 @@ public class Todoliste {
 	
 	public void leggTil(Todo todo) {
 		todos.add(todo);
+		todo.setListe(this);
+	}
+	
+	public void fjern(Todo todo) {
+		todos.remove(todo);
+		todo.setListe(null); //?
 	}
 	
 	public int getId() {

@@ -32,23 +32,23 @@ public class Main {
         
         /* ----------------------------------------------------------------- */
         
-//        System.out.println("\n\nEndrer navn, fjerner [Vaske Opp], legger til "
-//        		+ "[Vaske vinduer], endrer støvsuging-tekst til 'Gøy støvsuging'"
-//        		+ " og oppdaterer ...");
-//
-//        Todo vaskeVinduer = new Todo("Vaske vinduer");
-//
-//        husarbeid.setNavn("Gøy husarbeid");
-//        husarbeid.fjern(vaskeOpp);         
-//        husarbeid.leggTil(vaskeVinduer);   
-//        stovsuge.setTekst("Gøy støvsuging");
-//       
-//        todolisteDAO.oppdaterListe(husarbeid);
-//        
-//        System.out.println("Etter oppdaterListe():");
-//        System.out.println(todolisteDAO.finnListe(id));
-//        
-//		pauseOgSjekkDatabasen("\nSjekk at vi har fått oppdatert databasen riktig.");
+        System.out.println("\n\nEndrer navn, fjerner [Vaske Opp], legger til "
+        		+ "[Vaske vinduer], endrer støvsuging-tekst til 'Gøy støvsuging'"
+        		+ " og oppdaterer ...");
+
+        Todo vaskeVinduer = new Todo("Vaske vinduer");
+
+        husarbeid.setNavn("Gøy husarbeid");
+        husarbeid.fjern(vaskeOpp);         
+        husarbeid.leggTil(vaskeVinduer);   
+        stovsuge.setTekst("Gøy støvsuging");
+       
+        todolisteDAO.oppdaterListe(husarbeid);
+        
+        System.out.println("Etter oppdaterListe():");
+        System.out.println(todolisteDAO.hentListe(husarbeid.getId()));
+        
+		pauseOgSjekkDatabasen("\nSjekk at vi har fått oppdatert databasen riktig.");
         
         /* ----------------------------------------------------------------- */
         

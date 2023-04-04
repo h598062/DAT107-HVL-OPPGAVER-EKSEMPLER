@@ -1,0 +1,23 @@
+
+    public Karakter registrerKarakterForStudent(
+    		int studNr, String emnekode, LocalDate dato, String bokstav) {
+
+        (1) Karakter gml = hentKarakterForStudentIEmne(studNr, emnekode);
+    	
+    	(2) Vitnemal vm = hentVitnemalForStudent(studNr);
+    		vm = em.merge(vm);
+
+    	(3)	Karakter ny = new Karakter(emnekode, dato, bokstav);
+    	
+    	(4)	ny.setVitnemal(vm);
+    	
+    	(5)	vm.leggTilKarakter(ny);
+    	
+     	(6)	em.persist(ny);
+
+   	    if (gml != null) {
+            (7) vm.fjernKarakter(gml);
+
+            (8) em.remove(em.merge(gml));
+        }
+
