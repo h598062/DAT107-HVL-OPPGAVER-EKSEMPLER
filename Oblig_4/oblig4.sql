@@ -119,7 +119,8 @@ VALUES ('{
 -- Fjern tlf fra alle kunder
 UPDATE Kunde
 SET data = data - 'tlf';
-SELECT * FROM Kunde;
+SELECT *
+FROM Kunde;
 
 
 -- Oppgave D)
@@ -170,6 +171,7 @@ ORDER BY Passering.data ->> 'regnr';
 -- skriv ut antall passeringer per registreringsnummer
 SELECT Passering.data ->> 'regnr' AS regnr, COUNT(*) AS antall
 FROM Passering
+WHERE Passering.data ->> 'regnr' != ''
 GROUP BY Passering.data ->> 'regnr';
 
 
